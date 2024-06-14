@@ -147,18 +147,11 @@ def game_scene():
     aliens = []
     alien_objects = AlienList()
 
-    for alien_number in range(constants.TOTAL_NUMBER_OF_RIGHT_ALIENS):
-        a_single_alien = stage.Sprite(image_bank, 8, constants.OFF_SCREEN_X, constants.OFF_SCREEN_Y)
+    for alien_number in range(constants.TOTAL_NUMBER_OF_ALIENS):
+        a_single_alien = stage.Sprite(image_bank_sprites, 8, constants.OFF_SCREEN_X, constants.OFF_SCREEN_Y)
 
         aliens.append(a_single_alien)
         a_alien_object = Alien(constants.OFF_SCREEN_X, constants.OFF_SCREEN_Y, "right")
-        alien_objects.add_to_list(a_alien_object)
-
-    for alien_number in range(constants.TOTAL_NUMBER_OF_LEFT_ALIENS):
-        a_single_alien = stage.Sprite(image_bank, 9, constants.OFF_SCREEN_X, constants.OFF_SCREEN_Y)
-
-        aliens.append(a_single_alien)
-        a_alien_object = Alien(constants.OFF_SCREEN_X, constants.OFF_SCREEN_Y, "left")
         alien_objects.add_to_list(a_alien_object)
     
     # place 2 aliens on the screen
@@ -170,7 +163,7 @@ def game_scene():
     laser_objects = LaserList()
 
     for laser_number in range(constants.TOTAL_NUMBER_OF_LASERS):
-        a_single_laser = stage.Sprite(image_bank, 2, constants.OFF_SCREEN_X, constants.OFF_SCREEN_Y)
+        a_single_laser = stage.Sprite(image_bank_sprites, 2, constants.OFF_SCREEN_X, constants.OFF_SCREEN_Y)
         lasers.append(a_single_laser)
 
         a_laser_object = Laser(constants.OFF_SCREEN_X, constants.OFF_SCREEN_Y)
