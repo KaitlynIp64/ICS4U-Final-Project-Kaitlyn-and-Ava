@@ -4,11 +4,11 @@
 # Created on: June 2024
 # This constants file is for Space Alien game
 
-from ship_class import ship
-from cannon_ball_class import CannonBall
-from cannon_ball_list_class import CannonBallList
-from pirate_ship_class import PirateShip
-from pirate_ship_list_class import PirateShipList
+from ship_class import Ship
+from laser_class import Laser
+from laser_class_list import LaserList
+from alien_class import Alien
+from alien_class_list import AlienList
 
 import random
 import time
@@ -82,20 +82,10 @@ def menu_scene():
     background = stage.Grid(image_bank, constants.SCREEN_GRID_X, constants.SCREEN_GRID_Y)
 
     text = []
-    text1 = stage.Text(width=29, height=12, font=None, palette=constants.RED_PALETTE, buffer=None)
+    text1 = stage.Text(width=29, height=12, font=None, buffer=None)
     text1.move(10, 10)
     text1.text("ALIEN SHOOTER")
     text.append(text1)
-    
-    text2 = stage.Text(width=29, height=12, font=None, palette=constants.BLUE_PALETTE, buffer=None)
-    text2.move(10, 90)
-    text2.text("SELECT: rules")
-    text.append(text2)
-
-    text3 = stage.Text(width=29, height=12, font=None, palette=constants.BLUE_PALETTE, buffer=None)
-    text3.move(10, 110)
-    text3.text("START: start game")
-    text.append(text3)
 
     game = stage.Stage(ugame.display, constants.FPS)
     game.layers = text + [background]
@@ -145,7 +135,7 @@ def game_scene():
     sound.mute(False)
 
     # create ship object
-   ship = stage.Sprite(
+    ship = stage.Sprite(
         image_bank_sprites,
         5,
         75,
@@ -158,14 +148,14 @@ def game_scene():
     alien_objects = AlienList()
 
     for alien_number in range(constants.TOTAL_NUMBER_OF_RIGHT_ALIENS):
-        a_single_alien = stage.Sprite(image_bank, 3, constants.OFF_SCREEN_X, constants.OFF_SCREEN_Y)
+        a_single_alien = stage.Sprite(image_bank, 8, constants.OFF_SCREEN_X, constants.OFF_SCREEN_Y)
 
         aliens.append(a_single_alien)
         a_alien_object = Alien(constants.OFF_SCREEN_X, constants.OFF_SCREEN_Y, "right")
         alien_objects.add_to_list(a_alien_object)
 
     for alien_number in range(constants.TOTAL_NUMBER_OF_LEFT_ALIENS):
-        a_single_alien = stage.Sprite(image_bank, 4, constants.OFF_SCREEN_X, constants.OFF_SCREEN_Y)
+        a_single_alien = stage.Sprite(image_bank, 9, constants.OFF_SCREEN_X, constants.OFF_SCREEN_Y)
 
         aliens.append(a_single_alien)
         a_alien_object = Alien(constants.OFF_SCREEN_X, constants.OFF_SCREEN_Y, "left")
