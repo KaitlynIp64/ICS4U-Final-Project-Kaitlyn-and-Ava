@@ -3,7 +3,7 @@
 """
 Created by: Kaitlyn I and Ava V
 Created on: June 2024
-This is the "images" class
+This is the "Images" class
 """
 
 import constants
