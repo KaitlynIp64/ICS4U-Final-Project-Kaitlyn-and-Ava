@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="ek-qvuOGlPZaqlyAyI6v" name="Page-1">
-        <mxGraphModel dx="320" dy="1627" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="304" dy="1604" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -94,9 +94,6 @@
                 </mxCell>
                 <mxCell id="40" value="+ add_to_list(self, laser):&#10;+ fire_laser(self, ship_x_pos, ship_y_pos): int&#10;+ velocity(self, laser_speed): int&#10;+ is_laser_off_screen(self): boolean" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="37">
                     <mxGeometry y="60" width="260" height="70" as="geometry"/>
-                </mxCell>
-                <mxCell id="41" value="AvaVenturino/ICS4U-Final-Project-KaitlynAndAva/alien_class_list.py" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-                    <mxGeometry x="940" y="-170" width="400" height="40" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
